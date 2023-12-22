@@ -74,6 +74,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileWriteException.cs" />
+    <Compile Include="FileCreationException.cs" />
+    <Compile Include="RequestException.cs" />
     <Compile Include="RequestObject.cs" />
     <Compile Include="SettingsObject.cs" />
     <Compile Include="SmartMeterApp.cs">

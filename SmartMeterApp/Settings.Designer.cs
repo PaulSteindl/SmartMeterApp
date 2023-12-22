@@ -251,9 +251,19 @@
             0,
             0,
             0});
+            this.numUpDownIntervall.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numUpDownIntervall.Name = "numUpDownIntervall";
             this.numUpDownIntervall.Size = new System.Drawing.Size(176, 29);
             this.numUpDownIntervall.TabIndex = 37;
+            this.numUpDownIntervall.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label8
             // 
@@ -311,9 +321,19 @@
             0,
             0,
             0});
+            this.numUpDownLogging.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numUpDownLogging.Name = "numUpDownLogging";
             this.numUpDownLogging.Size = new System.Drawing.Size(176, 29);
             this.numUpDownLogging.TabIndex = 42;
+            this.numUpDownLogging.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label10
             // 

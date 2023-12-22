@@ -24,6 +24,7 @@ namespace SmartMeterApp
         private static string _loggingPath;
         private Timer _timerIntervall;
         private Timer _timerLogger;
+        private static bool _isError = false;
 
         public SmartMeterApp()
         {
@@ -39,10 +40,17 @@ namespace SmartMeterApp
 
         private async void OnIntervallTimer(object sender, EventArgs e)
         {
-            RequestObject resultTop6 = await GetApiDataAsync(Settings.ActualSettings.Top6Url);
-            RequestObject resultTop7 = await GetApiDataAsync(Settings.ActualSettings.Top7Url);
+            try
+            {
+                RequestObject resultTop6 = await GetApiDataAsync(Settings.ActualSettings.Top6Url);
+                RequestObject resultTop7 = await GetApiDataAsync(Settings.ActualSettings.Top7Url);
 
-            UpdateUI(resultTop6, resultTop7);
+                UpdateUI(resultTop6, resultTop7);
+            }
+            catch (Exception ex)
+            {
+                HandleError(ex);
+            }
         }
 
         private async void OnLogTimer(object sender, EventArgs e)
@@ -50,13 +58,20 @@ namespace SmartMeterApp
             RequestObject resultTop6 = null;
             RequestObject resultTop7 = null;
 
-            if (Settings.ActualSettings.FlagTop6Phase1 || Settings.ActualSettings.FlagTop6Phase2 || Settings.ActualSettings.FlagTop6Phase3)
-                resultTop6 = await GetApiDataAsync(Settings.ActualSettings.Top6Url);
+            try
+            {
+                if (Settings.ActualSettings.FlagTop6Phase1 || Settings.ActualSettings.FlagTop6Phase2 || Settings.ActualSettings.FlagTop6Phase3)
+                    resultTop6 = await GetApiDataAsync(Settings.ActualSettings.Top6Url);
 
-            if (Settings.ActualSettings.FlagTop7Phase1 || Settings.ActualSettings.FlagTop7Phase2 || Settings.ActualSettings.FlagTop7Phase3)
-                resultTop7 = await GetApiDataAsync(Settings.ActualSettings.Top7Url);
+                if (Settings.ActualSettings.FlagTop7Phase1 || Settings.ActualSettings.FlagTop7Phase2 || Settings.ActualSettings.FlagTop7Phase3)
+                    resultTop7 = await GetApiDataAsync(Settings.ActualSettings.Top7Url);
 
-            LogResult(resultTop6, resultTop7);
+                LogResult(resultTop6, resultTop7);
+            }
+            catch(Exception ex)
+            {
+                HandleError(ex);
+            }
         }
 
         private static void CreateFileCheck()
@@ -85,6 +100,7 @@ namespace SmartMeterApp
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw new FileCreationException(e.Message);
             }
         }
 
@@ -158,6 +174,7 @@ namespace SmartMeterApp
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw new FileWriteException(e.Message);
             }
         }
 
@@ -277,9 +294,27 @@ namespace SmartMeterApp
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
-                    return null;
+                    throw new RequestException(e.Message);
                 }
             }
+        }
+
+        private static void HandleError(Exception e)
+        {
+            string error = $"{e.GetType()}: {e.Message}\n{e.InnerException}";
+
+            Console.WriteLine($"Error: {error}");
+
+            if (!_isError)
+            {
+                _isError = true;
+                MessageBox.Show(error, "FEHLER", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private static void HandleInformation(string info)
+        {
+            MessageBox.Show(info, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -299,7 +334,11 @@ namespace SmartMeterApp
                 _timerIntervall.Interval = Settings.ActualSettings.IntervallRealtimeData * Settings.IntervallMultiplier;
                 if(_timerLogger != null)
                     _timerLogger.Interval = Settings.ActualSettings.IntervallLogging * Settings.IntervallMultiplier;
+
+                HandleInformation("Einstellungen aktualisiert.");
             }
+
+            _isError = false;
         }
 
         private void btnActivateLogging_Click(object sender, EventArgs e)
@@ -329,7 +368,7 @@ namespace SmartMeterApp
                 this._loggingActive = false;
             }
 
-            Console.WriteLine("logging Active: " + this._loggingActive);
+            HandleInformation($"Logging aktiv: {this._loggingActive}");
         }
     }
 }

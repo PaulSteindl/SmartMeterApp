@@ -297,7 +297,7 @@
             this.txtBxTop6Total.Name = "txtBxTop6Total";
             this.txtBxTop6Total.ReadOnly = true;
             this.txtBxTop6Total.Size = new System.Drawing.Size(87, 29);
-            this.txtBxTop6Total.TabIndex = 32;;
+            this.txtBxTop6Total.TabIndex = 32;
             // 
             // paneTop7
             // 
