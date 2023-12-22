@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SmartMeterApp));
             this.txtBxTotalPhase = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,19 +63,19 @@
             // 
             // txtBxTotalPhase
             // 
-            this.txtBxTotalPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTotalPhase.Location = new System.Drawing.Point(38, 45);
+            this.txtBxTotalPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxTotalPhase.Location = new System.Drawing.Point(72, 31);
             this.txtBxTotalPhase.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTotalPhase.Name = "txtBxTotalPhase";
             this.txtBxTotalPhase.ReadOnly = true;
-            this.txtBxTotalPhase.Size = new System.Drawing.Size(84, 29);
+            this.txtBxTotalPhase.Size = new System.Drawing.Size(215, 44);
             this.txtBxTotalPhase.TabIndex = 31;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(33, 17);
+            this.label9.Location = new System.Drawing.Point(129, 5);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 26);
@@ -232,7 +233,7 @@
             // btnActivateLogging
             // 
             this.btnActivateLogging.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActivateLogging.Location = new System.Drawing.Point(166, 10);
+            this.btnActivateLogging.Location = new System.Drawing.Point(7, 256);
             this.btnActivateLogging.Margin = new System.Windows.Forms.Padding(2);
             this.btnActivateLogging.Name = "btnActivateLogging";
             this.btnActivateLogging.Size = new System.Drawing.Size(199, 31);
@@ -244,10 +245,10 @@
             // btnSettings
             // 
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.Location = new System.Drawing.Point(166, 46);
+            this.btnSettings.Location = new System.Drawing.Point(212, 256);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(199, 31);
+            this.btnSettings.Size = new System.Drawing.Size(150, 31);
             this.btnSettings.TabIndex = 1;
             this.btnSettings.Text = "Einstellungen";
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -259,20 +260,21 @@
             this.panelGesamt.Controls.Add(this.txtBxTotalPhase);
             this.panelGesamt.Location = new System.Drawing.Point(-1, -2);
             this.panelGesamt.Name = "panelGesamt";
-            this.panelGesamt.Size = new System.Drawing.Size(150, 79);
+            this.panelGesamt.Size = new System.Drawing.Size(363, 79);
             this.panelGesamt.TabIndex = 32;
             // 
             // panelButtons
             // 
-            this.panelButtons.Location = new System.Drawing.Point(155, -2);
+            this.panelButtons.Location = new System.Drawing.Point(0, 167);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(212, 79);
+            this.panelButtons.Size = new System.Drawing.Size(368, 43);
             this.panelButtons.TabIndex = 33;
             // 
             // panelTop6
             // 
             this.panelTop6.Controls.Add(this.label11);
             this.panelTop6.Controls.Add(this.txtBxTop6Total);
+            this.panelTop6.Controls.Add(this.panelButtons);
             this.panelTop6.Location = new System.Drawing.Point(-1, 82);
             this.panelTop6.Name = "panelTop6";
             this.panelTop6.Size = new System.Drawing.Size(176, 169);
@@ -345,7 +347,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 254);
+            this.ClientSize = new System.Drawing.Size(369, 294);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnActivateLogging);
             this.Controls.Add(this.label4);
@@ -356,12 +358,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBxTop6Phase1);
             this.Controls.Add(this.panelGesamt);
-            this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelTop6);
             this.Controls.Add(this.paneTop7);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SmartMeterApp";
             this.Text = "SmartMeter-App";
+            this.TopMost = true;
             this.panelGesamt.ResumeLayout(false);
             this.panelGesamt.PerformLayout();
             this.panelTop6.ResumeLayout(false);

@@ -24,13 +24,15 @@ namespace SmartMeterApp
         private static string _loggingPath;
         private Timer _timerIntervall;
         private Timer _timerLogger;
-        private static bool _isError = false;
+        private static bool _isError;
 
         public SmartMeterApp()
         {
             InitializeComponent();
             Settings.UpdateActualSettings();
+
             _loggingActive = false;
+            _isError = false;
 
             _timerIntervall = new Timer();
             _timerIntervall.Interval = Settings.ActualSettings.IntervallRealtimeData * Settings.IntervallMultiplier;
@@ -84,13 +86,13 @@ namespace SmartMeterApp
                     {
                         string csvHeader = "DateTime";
 
-                        if (Settings.ActualSettings.FlagTop6Phase1) csvHeader += ",Top6Phase1";
-                        if (Settings.ActualSettings.FlagTop6Phase2) csvHeader += ",Top6Phase2";
-                        if (Settings.ActualSettings.FlagTop6Phase3) csvHeader += ",Top6Phase3";
+                        if (Settings.ActualSettings.FlagTop6Phase1) csvHeader += ";Top6Phase1";
+                        if (Settings.ActualSettings.FlagTop6Phase2) csvHeader += ";Top6Phase2";
+                        if (Settings.ActualSettings.FlagTop6Phase3) csvHeader += ";Top6Phase3";
 
-                        if (Settings.ActualSettings.FlagTop7Phase1) csvHeader += ",Top7Phase1";
-                        if (Settings.ActualSettings.FlagTop7Phase2) csvHeader += ",Top7Phase2";
-                        if (Settings.ActualSettings.FlagTop7Phase3) csvHeader += ",Top7Phase3";
+                        if (Settings.ActualSettings.FlagTop7Phase1) csvHeader += ";Top7Phase1";
+                        if (Settings.ActualSettings.FlagTop7Phase2) csvHeader += ";Top7Phase2";
+                        if (Settings.ActualSettings.FlagTop7Phase3) csvHeader += ";Top7Phase3";
 
                         byte[] info = new UTF8Encoding(true).GetBytes(csvHeader + "\n");
                         fs.Write(info, 0, info.Length);
@@ -108,6 +110,8 @@ namespace SmartMeterApp
         {
             CreateFileCheck();
 
+            string errorAddition = ";ERR";
+
             try
             {
                 using (StreamWriter writer = new StreamWriter(_loggingPath, append: true))
@@ -118,54 +122,54 @@ namespace SmartMeterApp
                     {
                         if (Settings.ActualSettings.FlagTop6Phase1)
                         {
-                            if (resultTop6.PA.HasValue && Settings.ActualSettings.FlagTop6Phase1) csvInfo += $",{resultTop6.PA.Value}";
-                            else csvInfo += ",ERR";
+                            if (resultTop6.PA.HasValue && Settings.ActualSettings.FlagTop6Phase1) csvInfo += $";{resultTop6.PA.Value}";
+                            else csvInfo += errorAddition;
                         }
 
                         if (Settings.ActualSettings.FlagTop6Phase2)
                         {
-                            if (resultTop6.PB.HasValue && Settings.ActualSettings.FlagTop6Phase2) csvInfo += $",{resultTop6.PB.Value}";
-                            else csvInfo += ",ERR";
+                            if (resultTop6.PB.HasValue && Settings.ActualSettings.FlagTop6Phase2) csvInfo += $";{resultTop6.PB.Value}";
+                            else csvInfo += errorAddition;
                         }
 
                         if (Settings.ActualSettings.FlagTop6Phase3)
                         {
-                            if (resultTop6.PC.HasValue && Settings.ActualSettings.FlagTop6Phase3) csvInfo += $",{resultTop6.PC.Value}";
-                            else csvInfo += ",ERR";
+                            if (resultTop6.PC.HasValue && Settings.ActualSettings.FlagTop6Phase3) csvInfo += $";{resultTop6.PC.Value}";
+                            else csvInfo += errorAddition;
                         }
                     }
                     else
                     {
-                        if (Settings.ActualSettings.FlagTop6Phase1) csvInfo += ",ERR";
-                        if (Settings.ActualSettings.FlagTop6Phase2) csvInfo += ",ERR";
-                        if (Settings.ActualSettings.FlagTop6Phase3) csvInfo += ",ERR";
+                        if (Settings.ActualSettings.FlagTop6Phase1) csvInfo += errorAddition;
+                        if (Settings.ActualSettings.FlagTop6Phase2) csvInfo += errorAddition;
+                        if (Settings.ActualSettings.FlagTop6Phase3) csvInfo += errorAddition;
                     }
 
                     if (resultTop7 != null)
                     {
                         if (Settings.ActualSettings.FlagTop7Phase1)
                         {
-                            if (resultTop7.PA.HasValue) csvInfo += $",{resultTop7.PA.Value}";
-                            else csvInfo += ",ERR";
+                            if (resultTop7.PA.HasValue) csvInfo += $";{resultTop7.PA.Value}";
+                            else csvInfo += errorAddition;
                         }
 
                         if (Settings.ActualSettings.FlagTop7Phase2)
                         {
-                            if (resultTop7.PB.HasValue) csvInfo += $",{resultTop7.PB.Value}";
-                            else csvInfo += ",ERR";
+                            if (resultTop7.PB.HasValue) csvInfo += $";{resultTop7.PB.Value}";
+                            else csvInfo += errorAddition;
                         }
 
                         if (Settings.ActualSettings.FlagTop7Phase3)
                         {
-                            if (resultTop7.PC.HasValue) csvInfo += $",{resultTop7.PC.Value}";
-                            else csvInfo += ",ERR";
+                            if (resultTop7.PC.HasValue) csvInfo += $";{resultTop7.PC.Value}";
+                            else csvInfo += errorAddition;
                         }
                     }
                     else
                     {
-                        if (Settings.ActualSettings.FlagTop7Phase1) csvInfo += ",ERR";
-                        if (Settings.ActualSettings.FlagTop7Phase2) csvInfo += ",ERR";
-                        if (Settings.ActualSettings.FlagTop7Phase3) csvInfo += ",ERR";
+                        if (Settings.ActualSettings.FlagTop7Phase1) csvInfo += errorAddition;
+                        if (Settings.ActualSettings.FlagTop7Phase2) csvInfo += errorAddition;
+                        if (Settings.ActualSettings.FlagTop7Phase3) csvInfo += errorAddition;
                     }
 
                     writer.WriteLine(csvInfo);
@@ -182,11 +186,11 @@ namespace SmartMeterApp
         {
             if(value >= 0) 
             {
-                txtBox.BackColor = Color.Green;
+                txtBox.BackColor = Color.FromArgb(255, 100, 100);
             }
             else
             {
-                txtBox.BackColor = Color.Red;
+                txtBox.BackColor = Color.LightGreen;
             }
 
             txtBox.ForeColor = Color.Black;
@@ -267,7 +271,7 @@ namespace SmartMeterApp
                 if (resultTop6.PT.HasValue && resultTop7.PT.HasValue)
                 {
                     double total = resultTop6.PT.Value + resultTop7.PT.Value;
-                    this.txtBxTotalPhase.Text = total.ToString("F4");
+                    this.txtBxTotalPhase.Text = total.ToString("F7");
                     UpdateColor(this.txtBxTotalPhase, total);
                 }
             }
