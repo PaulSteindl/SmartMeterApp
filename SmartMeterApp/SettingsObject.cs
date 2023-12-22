@@ -33,5 +33,7 @@ namespace SmartMeterApp
         public bool FlagTop7Phase2 { get; set; }
 
         public bool FlagTop7Phase3 { get; set; }
+
+        public bool FlagOnTop { get; set; }
     }
 }

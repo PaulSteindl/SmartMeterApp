@@ -29,7 +29,8 @@ namespace SmartMeterApp
             FlagTop6Phase3 = true,
             FlagTop7Phase1 = true,
             FlagTop7Phase2 = true,
-            FlagTop7Phase3 = true
+            FlagTop7Phase3 = true,
+            FlagOnTop = true
         };
 
         public Settings()
@@ -84,6 +85,8 @@ namespace SmartMeterApp
             this.chxTop7Phase1.Checked = settingsSaved.FlagTop7Phase1;
             this.chxTop7Phase2.Checked = settingsSaved.FlagTop7Phase2;
             this.chxTop7Phase3.Checked = settingsSaved.FlagTop7Phase3;
+
+            this.chxOnTop.Checked = settingsSaved.FlagOnTop;
         }
 
         // Saves to C:\Users\<Username>\AppData\Local\SmartMeterApp\SmartMeterApp.exe_Url_<Hash>\<Version>
@@ -106,6 +109,8 @@ namespace SmartMeterApp
             settings.FlagTop7Phase1 = this.chxTop7Phase1.Checked;
             settings.FlagTop7Phase2 = this.chxTop7Phase2.Checked;
             settings.FlagTop7Phase3 = this.chxTop7Phase3.Checked;
+
+            settings.FlagOnTop = this.chxOnTop.Checked;
 
             Properties.Settings.Default[_settingString] = JsonSerializer.Serialize(settings);
             Properties.Settings.Default.Save();

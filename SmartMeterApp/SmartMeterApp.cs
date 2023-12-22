@@ -108,8 +108,6 @@ namespace SmartMeterApp
 
         private void LogResult(RequestObject resultTop6, RequestObject resultTop7)
         {
-            CreateFileCheck();
-
             string errorAddition = ";ERR";
 
             try
@@ -335,6 +333,7 @@ namespace SmartMeterApp
             if (dialogResult == DialogResult.OK)
             {
                 Settings.UpdateActualSettings();
+                this.TopMost = Settings.ActualSettings.FlagOnTop;
                 _timerIntervall.Interval = Settings.ActualSettings.IntervallRealtimeData * Settings.IntervallMultiplier;
                 if(_timerLogger != null)
                     _timerLogger.Interval = Settings.ActualSettings.IntervallLogging * Settings.IntervallMultiplier;
@@ -354,6 +353,15 @@ namespace SmartMeterApp
 
                 if (this.fileDialogLogging.ShowDialog() == DialogResult.OK)
                 {
+                    try
+                    {
+                        CreateFileCheck();
+                    }
+                    catch(Exception ex)
+                    {
+                        HandleError(ex);
+                    }
+
                     _loggingPath = this.fileDialogLogging.FileName;
 
                     _timerLogger = new Timer();

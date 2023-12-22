@@ -52,6 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.numUpDownLogging = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
+            this.chxOnTop = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownIntervall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownLogging)).BeginInit();
             this.SuspendLayout();
@@ -279,10 +280,10 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(6, 266);
+            this.btnSave.Location = new System.Drawing.Point(145, 266);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(182, 31);
+            this.btnSave.Size = new System.Drawing.Size(111, 31);
             this.btnSave.TabIndex = 39;
             this.btnSave.Text = "Speichern";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -291,10 +292,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(193, 266);
+            this.btnCancel.Location = new System.Drawing.Point(260, 266);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(182, 31);
+            this.btnCancel.Size = new System.Drawing.Size(118, 31);
             this.btnCancel.TabIndex = 40;
             this.btnCancel.Text = "Abbrechen";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -346,11 +347,25 @@
             this.label10.TabIndex = 41;
             this.label10.Text = "Logging:";
             // 
+            // chxOnTop
+            // 
+            this.chxOnTop.AutoSize = true;
+            this.chxOnTop.Checked = true;
+            this.chxOnTop.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chxOnTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxOnTop.Location = new System.Drawing.Point(3, 268);
+            this.chxOnTop.Name = "chxOnTop";
+            this.chxOnTop.Size = new System.Drawing.Size(137, 28);
+            this.chxOnTop.TabIndex = 44;
+            this.chxOnTop.Text = "Vordergrund";
+            this.chxOnTop.UseVisualStyleBackColor = true;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 301);
+            this.Controls.Add(this.chxOnTop);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.numUpDownLogging);
             this.Controls.Add(this.label10);
@@ -411,5 +426,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown numUpDownLogging;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox chxOnTop;
     }
 }
