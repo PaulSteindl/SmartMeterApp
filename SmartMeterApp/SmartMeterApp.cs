@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using System.Text.Json.Nodes;
 using System.Text.Json;
-using System.Runtime.CompilerServices;
 using System.IO;
 
 namespace SmartMeterApp
@@ -33,6 +25,7 @@ namespace SmartMeterApp
 
             _loggingActive = false;
             _isError = false;
+            this.TopMost = Settings.ActualSettings.FlagOnTop;
 
             _timerIntervall = new Timer();
             _timerIntervall.Interval = Settings.ActualSettings.IntervallRealtimeData * Settings.IntervallMultiplier;
@@ -346,7 +339,7 @@ namespace SmartMeterApp
 
         private void btnActivateLogging_Click(object sender, EventArgs e)
         {
-            if(!_loggingActive)
+            if (!_loggingActive)
             {
                 string dateTimeNow = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
                 this.fileDialogLogging.FileName = $"SmartMeterLogging_{dateTimeNow}";
@@ -358,8 +351,9 @@ namespace SmartMeterApp
                     try
                     {
                         CreateFileCheck();
+                        OnLogTimer(this, EventArgs.Empty);
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         HandleError(ex);
                     }
@@ -375,6 +369,8 @@ namespace SmartMeterApp
             } 
             else if(_loggingActive)
             {
+                OnLogTimer(this, EventArgs.Empty);
+
                 _timerLogger.Stop();
                 this.btnActivateLogging.Text = "Logging Aktivieren";
                 this._loggingActive = false;
