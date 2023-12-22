@@ -269,7 +269,7 @@ namespace SmartMeterApp
                 if (resultTop6.PT.HasValue && resultTop7.PT.HasValue)
                 {
                     double total = resultTop6.PT.Value + resultTop7.PT.Value;
-                    this.txtBxTotalPhase.Text = total.ToString("F7");
+                    this.txtBxTotalPhase.Text = total.ToString("F6");
                     UpdateColor(this.txtBxTotalPhase, total);
                 }
             }
@@ -353,6 +353,8 @@ namespace SmartMeterApp
 
                 if (this.fileDialogLogging.ShowDialog() == DialogResult.OK)
                 {
+                    _loggingPath = this.fileDialogLogging.FileName;
+
                     try
                     {
                         CreateFileCheck();
@@ -361,8 +363,6 @@ namespace SmartMeterApp
                     {
                         HandleError(ex);
                     }
-
-                    _loggingPath = this.fileDialogLogging.FileName;
 
                     _timerLogger = new Timer();
                     _timerLogger.Interval = Settings.ActualSettings.IntervallLogging * Settings.IntervallMultiplier;

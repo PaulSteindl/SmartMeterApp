@@ -69,6 +69,7 @@
             this.txtBxTotalPhase.ReadOnly = true;
             this.txtBxTotalPhase.Size = new System.Drawing.Size(215, 44);
             this.txtBxTotalPhase.TabIndex = 31;
+            this.txtBxTotalPhase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
@@ -85,7 +86,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(192, 158);
+            this.label5.Location = new System.Drawing.Point(189, 158);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 24);
@@ -95,18 +96,19 @@
             // txtBxTop7Phase3
             // 
             this.txtBxTop7Phase3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop7Phase3.Location = new System.Drawing.Point(276, 156);
+            this.txtBxTop7Phase3.Location = new System.Drawing.Point(273, 156);
             this.txtBxTop7Phase3.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop7Phase3.Name = "txtBxTop7Phase3";
             this.txtBxTop7Phase3.ReadOnly = true;
-            this.txtBxTop7Phase3.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop7Phase3.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop7Phase3.TabIndex = 28;
+            this.txtBxTop7Phase3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(192, 126);
+            this.label6.Location = new System.Drawing.Point(189, 126);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 24);
@@ -116,18 +118,19 @@
             // txtBxTop7Phase2
             // 
             this.txtBxTop7Phase2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop7Phase2.Location = new System.Drawing.Point(276, 124);
+            this.txtBxTop7Phase2.Location = new System.Drawing.Point(273, 124);
             this.txtBxTop7Phase2.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop7Phase2.Name = "txtBxTop7Phase2";
             this.txtBxTop7Phase2.ReadOnly = true;
-            this.txtBxTop7Phase2.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop7Phase2.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop7Phase2.TabIndex = 26;
+            this.txtBxTop7Phase2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(192, 93);
+            this.label7.Location = new System.Drawing.Point(189, 93);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 24);
@@ -148,18 +151,19 @@
             // txtBxTop7Phase1
             // 
             this.txtBxTop7Phase1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop7Phase1.Location = new System.Drawing.Point(276, 91);
+            this.txtBxTop7Phase1.Location = new System.Drawing.Point(273, 91);
             this.txtBxTop7Phase1.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop7Phase1.Name = "txtBxTop7Phase1";
             this.txtBxTop7Phase1.ReadOnly = true;
-            this.txtBxTop7Phase1.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop7Phase1.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop7Phase1.TabIndex = 23;
+            this.txtBxTop7Phase1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 158);
+            this.label4.Location = new System.Drawing.Point(0, 158);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 24);
@@ -169,18 +173,19 @@
             // txtBxTop6Phase3
             // 
             this.txtBxTop6Phase3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop6Phase3.Location = new System.Drawing.Point(86, 156);
+            this.txtBxTop6Phase3.Location = new System.Drawing.Point(84, 156);
             this.txtBxTop6Phase3.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop6Phase3.Name = "txtBxTop6Phase3";
             this.txtBxTop6Phase3.ReadOnly = true;
-            this.txtBxTop6Phase3.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop6Phase3.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop6Phase3.TabIndex = 21;
+            this.txtBxTop6Phase3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 126);
+            this.label3.Location = new System.Drawing.Point(0, 126);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 24);
@@ -190,18 +195,19 @@
             // txtBxTop6Phase2
             // 
             this.txtBxTop6Phase2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop6Phase2.Location = new System.Drawing.Point(86, 124);
+            this.txtBxTop6Phase2.Location = new System.Drawing.Point(84, 124);
             this.txtBxTop6Phase2.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop6Phase2.Name = "txtBxTop6Phase2";
             this.txtBxTop6Phase2.ReadOnly = true;
-            this.txtBxTop6Phase2.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop6Phase2.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop6Phase2.TabIndex = 19;
+            this.txtBxTop6Phase2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 93);
+            this.label2.Location = new System.Drawing.Point(0, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 24);
@@ -222,12 +228,13 @@
             // txtBxTop6Phase1
             // 
             this.txtBxTop6Phase1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop6Phase1.Location = new System.Drawing.Point(86, 91);
+            this.txtBxTop6Phase1.Location = new System.Drawing.Point(84, 91);
             this.txtBxTop6Phase1.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop6Phase1.Name = "txtBxTop6Phase1";
             this.txtBxTop6Phase1.ReadOnly = true;
-            this.txtBxTop6Phase1.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop6Phase1.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop6Phase1.TabIndex = 16;
+            this.txtBxTop6Phase1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnActivateLogging
             // 
@@ -283,7 +290,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 128);
+            this.label11.Location = new System.Drawing.Point(1, 128);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 24);
@@ -293,12 +300,13 @@
             // txtBxTop6Total
             // 
             this.txtBxTop6Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop6Total.Location = new System.Drawing.Point(87, 126);
+            this.txtBxTop6Total.Location = new System.Drawing.Point(85, 126);
             this.txtBxTop6Total.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop6Total.Name = "txtBxTop6Total";
             this.txtBxTop6Total.ReadOnly = true;
-            this.txtBxTop6Total.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop6Total.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop6Total.TabIndex = 32;
+            this.txtBxTop6Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // paneTop7
             // 
@@ -311,7 +319,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(192, 191);
+            this.label10.Location = new System.Drawing.Point(189, 191);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 24);
@@ -321,12 +329,13 @@
             // txtBxTop7Total
             // 
             this.txtBxTop7Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxTop7Total.Location = new System.Drawing.Point(276, 189);
+            this.txtBxTop7Total.Location = new System.Drawing.Point(273, 189);
             this.txtBxTop7Total.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxTop7Total.Name = "txtBxTop7Total";
             this.txtBxTop7Total.ReadOnly = true;
-            this.txtBxTop7Total.Size = new System.Drawing.Size(87, 29);
+            this.txtBxTop7Total.Size = new System.Drawing.Size(90, 29);
             this.txtBxTop7Total.TabIndex = 30;
+            this.txtBxTop7Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // fileDialogLogging
             // 
