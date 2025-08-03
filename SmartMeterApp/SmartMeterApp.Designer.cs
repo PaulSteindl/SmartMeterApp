@@ -61,7 +61,9 @@
             this.SuspendLayout();
             // 
             // txtBxTotalPhase
-            // 
+            //
+            this.txtBxTotalPhase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBxTotalPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxTotalPhase.Location = new System.Drawing.Point(134, 8);
             this.txtBxTotalPhase.Margin = new System.Windows.Forms.Padding(2);
@@ -83,7 +85,8 @@
             this.label9.Text = "Gesamt:";
             // 
             // label5
-            // 
+            //
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(189, 158);
@@ -94,7 +97,8 @@
             this.label5.Text = "Phase 3:";
             // 
             // txtBxTop7Phase3
-            // 
+            //
+            this.txtBxTop7Phase3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBxTop7Phase3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxTop7Phase3.Location = new System.Drawing.Point(273, 156);
             this.txtBxTop7Phase3.Margin = new System.Windows.Forms.Padding(2);
@@ -105,7 +109,8 @@
             this.txtBxTop7Phase3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
-            // 
+            //
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(189, 126);
@@ -116,7 +121,8 @@
             this.label6.Text = "Phase 2:";
             // 
             // txtBxTop7Phase2
-            // 
+            //
+            this.txtBxTop7Phase2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBxTop7Phase2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxTop7Phase2.Location = new System.Drawing.Point(273, 124);
             this.txtBxTop7Phase2.Margin = new System.Windows.Forms.Padding(2);
@@ -127,7 +133,8 @@
             this.txtBxTop7Phase2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
-            // 
+            //
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(189, 93);
@@ -138,7 +145,8 @@
             this.label7.Text = "Phase 1:";
             // 
             // label8
-            // 
+            //
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(232, 63);
@@ -149,7 +157,8 @@
             this.label8.Text = "Top 7";
             // 
             // txtBxTop7Phase1
-            // 
+            //
+            this.txtBxTop7Phase1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBxTop7Phase1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxTop7Phase1.Location = new System.Drawing.Point(273, 91);
             this.txtBxTop7Phase1.Margin = new System.Windows.Forms.Padding(2);
@@ -237,7 +246,8 @@
             this.txtBxTop6Phase1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnActivateLogging
-            // 
+            //
+            this.btnActivateLogging.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnActivateLogging.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActivateLogging.Location = new System.Drawing.Point(6, 222);
             this.btnActivateLogging.Margin = new System.Windows.Forms.Padding(2);
@@ -249,7 +259,8 @@
             this.btnActivateLogging.Click += new System.EventHandler(this.btnActivateLogging_Click);
             // 
             // btnSettings
-            // 
+            //
+            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.Location = new System.Drawing.Point(213, 222);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
@@ -261,7 +272,9 @@
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // panelGesamt
-            // 
+            //
+            this.panelGesamt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelGesamt.Controls.Add(this.label9);
             this.panelGesamt.Controls.Add(this.txtBxTotalPhase);
             this.panelGesamt.Location = new System.Drawing.Point(-1, -2);
@@ -309,14 +322,16 @@
             this.txtBxTop6Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // paneTop7
-            // 
+            //
+            this.paneTop7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.paneTop7.Location = new System.Drawing.Point(182, 63);
             this.paneTop7.Name = "paneTop7";
             this.paneTop7.Size = new System.Drawing.Size(185, 155);
             this.paneTop7.TabIndex = 35;
             // 
             // label10
-            // 
+            //
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(189, 191);
@@ -327,7 +342,8 @@
             this.label10.Text = "Gesamt:";
             // 
             // txtBxTop7Total
-            // 
+            //
+            this.txtBxTop7Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBxTop7Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxTop7Total.Location = new System.Drawing.Point(273, 189);
             this.txtBxTop7Total.Margin = new System.Windows.Forms.Padding(2);
