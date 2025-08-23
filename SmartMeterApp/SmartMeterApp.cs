@@ -37,8 +37,8 @@ namespace SmartMeterApp
         {
             try
             {
-                RequestObject resultTop6 = await GetApiDataAsync(Settings.ActualSettings.Top6Url);
-                RequestObject resultTop7 = await GetApiDataAsync(Settings.ActualSettings.Top7Url);
+                RequestObject resultTop6 = await GetSmartMeterApiDataAsync(Settings.ActualSettings.Top6Url);
+                RequestObject resultTop7 = await GetSmartMeterApiDataAsync(Settings.ActualSettings.Top7Url);
 
                 UpdateUI(resultTop6, resultTop7);
             }
@@ -56,10 +56,10 @@ namespace SmartMeterApp
             try
             {
                 if (Settings.ActualSettings.FlagTop6Phase1 || Settings.ActualSettings.FlagTop6Phase2 || Settings.ActualSettings.FlagTop6Phase3)
-                    resultTop6 = await GetApiDataAsync(Settings.ActualSettings.Top6Url);
+                    resultTop6 = await GetSmartMeterApiDataAsync(Settings.ActualSettings.Top6Url);
 
                 if (Settings.ActualSettings.FlagTop7Phase1 || Settings.ActualSettings.FlagTop7Phase2 || Settings.ActualSettings.FlagTop7Phase3)
-                    resultTop7 = await GetApiDataAsync(Settings.ActualSettings.Top7Url);
+                    resultTop7 = await GetSmartMeterApiDataAsync(Settings.ActualSettings.Top7Url);
 
                 LogResult(resultTop6, resultTop7);
             }
@@ -173,6 +173,18 @@ namespace SmartMeterApp
             }
         }
 
+        private void UpdateBackgroundColor(double value)
+        {
+            if (value >= 0)
+            {
+                this.BackColor = Color.Crimson;
+            }
+            else
+            {
+                this.BackColor = Color.GreenYellow;
+            }
+        }
+
         private void UpdateColor(TextBox txtBox, double value)
         {
             if(value >= 0) 
@@ -264,13 +276,14 @@ namespace SmartMeterApp
                     double total = resultTop6.PT.Value + resultTop7.PT.Value;
                     this.txtBxTotalPhase.Text = total.ToString("F6");
                     UpdateColor(this.txtBxTotalPhase, total);
+                    UpdateBackgroundColor(total);
                 }
             }
             else
                 this.txtBxTotalPhase.Text = "ERR";
         }
 
-        private static async Task<RequestObject> GetApiDataAsync(string url)
+        private static async Task<RequestObject> GetSmartMeterApiDataAsync(string url)
         {
             using (HttpClient client = new HttpClient())
             {
