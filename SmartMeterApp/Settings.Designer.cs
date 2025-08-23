@@ -53,8 +53,16 @@
             this.numUpDownLogging = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.chxOnTop = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numUpDownThresholdMax = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.numUpDownThresholdMin = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.chxAlarm = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownIntervall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownLogging)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownThresholdMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownThresholdMin)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -152,7 +160,7 @@
             // 
             this.chxTop6Phase1.AutoSize = true;
             this.chxTop6Phase1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTop6Phase1.Location = new System.Drawing.Point(91, 202);
+            this.chxTop6Phase1.Location = new System.Drawing.Point(89, 292);
             this.chxTop6Phase1.Margin = new System.Windows.Forms.Padding(2);
             this.chxTop6Phase1.Name = "chxTop6Phase1";
             this.chxTop6Phase1.Size = new System.Drawing.Size(97, 28);
@@ -164,7 +172,7 @@
             // 
             this.chxTop6Phase2.AutoSize = true;
             this.chxTop6Phase2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTop6Phase2.Location = new System.Drawing.Point(187, 202);
+            this.chxTop6Phase2.Location = new System.Drawing.Point(185, 292);
             this.chxTop6Phase2.Margin = new System.Windows.Forms.Padding(2);
             this.chxTop6Phase2.Name = "chxTop6Phase2";
             this.chxTop6Phase2.Size = new System.Drawing.Size(97, 28);
@@ -176,7 +184,7 @@
             // 
             this.chxTop6Phase3.AutoSize = true;
             this.chxTop6Phase3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTop6Phase3.Location = new System.Drawing.Point(283, 202);
+            this.chxTop6Phase3.Location = new System.Drawing.Point(281, 292);
             this.chxTop6Phase3.Margin = new System.Windows.Forms.Padding(2);
             this.chxTop6Phase3.Name = "chxTop6Phase3";
             this.chxTop6Phase3.Size = new System.Drawing.Size(97, 28);
@@ -188,7 +196,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 203);
+            this.label6.Location = new System.Drawing.Point(4, 293);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 24);
@@ -199,7 +207,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 235);
+            this.label7.Location = new System.Drawing.Point(4, 325);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 24);
@@ -210,7 +218,7 @@
             // 
             this.chxTop7Phase3.AutoSize = true;
             this.chxTop7Phase3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTop7Phase3.Location = new System.Drawing.Point(283, 234);
+            this.chxTop7Phase3.Location = new System.Drawing.Point(281, 324);
             this.chxTop7Phase3.Margin = new System.Windows.Forms.Padding(2);
             this.chxTop7Phase3.Name = "chxTop7Phase3";
             this.chxTop7Phase3.Size = new System.Drawing.Size(97, 28);
@@ -222,7 +230,7 @@
             // 
             this.chxTop7Phase2.AutoSize = true;
             this.chxTop7Phase2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTop7Phase2.Location = new System.Drawing.Point(187, 234);
+            this.chxTop7Phase2.Location = new System.Drawing.Point(185, 324);
             this.chxTop7Phase2.Margin = new System.Windows.Forms.Padding(2);
             this.chxTop7Phase2.Name = "chxTop7Phase2";
             this.chxTop7Phase2.Size = new System.Drawing.Size(97, 28);
@@ -234,7 +242,7 @@
             // 
             this.chxTop7Phase1.AutoSize = true;
             this.chxTop7Phase1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTop7Phase1.Location = new System.Drawing.Point(91, 234);
+            this.chxTop7Phase1.Location = new System.Drawing.Point(89, 324);
             this.chxTop7Phase1.Margin = new System.Windows.Forms.Padding(2);
             this.chxTop7Phase1.Name = "chxTop7Phase1";
             this.chxTop7Phase1.Size = new System.Drawing.Size(97, 28);
@@ -280,7 +288,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(145, 266);
+            this.btnSave.Location = new System.Drawing.Point(143, 356);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(111, 31);
@@ -292,7 +300,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(260, 266);
+            this.btnCancel.Location = new System.Drawing.Point(258, 356);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(118, 31);
@@ -353,18 +361,117 @@
             this.chxOnTop.Checked = true;
             this.chxOnTop.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chxOnTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxOnTop.Location = new System.Drawing.Point(3, 268);
+            this.chxOnTop.Location = new System.Drawing.Point(1, 358);
             this.chxOnTop.Name = "chxOnTop";
             this.chxOnTop.Size = new System.Drawing.Size(137, 28);
             this.chxOnTop.TabIndex = 44;
             this.chxOnTop.Text = "Vordergrund";
             this.chxOnTop.UseVisualStyleBackColor = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(9, 200);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(210, 24);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Alarm Grenzwerte (kW):";
+            // 
+            // numUpDownThresholdMax
+            // 
+            this.numUpDownThresholdMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUpDownThresholdMax.Location = new System.Drawing.Point(106, 226);
+            this.numUpDownThresholdMax.Margin = new System.Windows.Forms.Padding(2);
+            this.numUpDownThresholdMax.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numUpDownThresholdMax.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.numUpDownThresholdMax.Name = "numUpDownThresholdMax";
+            this.numUpDownThresholdMax.Size = new System.Drawing.Size(176, 29);
+            this.numUpDownThresholdMax.TabIndex = 47;
+            this.numUpDownThresholdMax.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(9, 227);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 24);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Oben:";
+            // 
+            // numUpDownThresholdMin
+            // 
+            this.numUpDownThresholdMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUpDownThresholdMin.Location = new System.Drawing.Point(106, 259);
+            this.numUpDownThresholdMin.Margin = new System.Windows.Forms.Padding(2);
+            this.numUpDownThresholdMin.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numUpDownThresholdMin.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.numUpDownThresholdMin.Name = "numUpDownThresholdMin";
+            this.numUpDownThresholdMin.Size = new System.Drawing.Size(176, 29);
+            this.numUpDownThresholdMin.TabIndex = 49;
+            this.numUpDownThresholdMin.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(9, 260);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 24);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "Unten:";
+            // 
+            // chxAlarm
+            // 
+            this.chxAlarm.AutoSize = true;
+            this.chxAlarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxAlarm.Location = new System.Drawing.Point(298, 245);
+            this.chxAlarm.Margin = new System.Windows.Forms.Padding(2);
+            this.chxAlarm.Name = "chxAlarm";
+            this.chxAlarm.Size = new System.Drawing.Size(78, 28);
+            this.chxAlarm.TabIndex = 50;
+            this.chxAlarm.Text = "Alarm";
+            this.chxAlarm.UseVisualStyleBackColor = true;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 301);
+            this.ClientSize = new System.Drawing.Size(387, 390);
+            this.Controls.Add(this.chxAlarm);
+            this.Controls.Add(this.numUpDownThresholdMin);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.numUpDownThresholdMax);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.chxOnTop);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.numUpDownLogging);
@@ -395,6 +502,8 @@
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownIntervall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownLogging)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownThresholdMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownThresholdMin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,5 +536,11 @@
         private System.Windows.Forms.NumericUpDown numUpDownLogging;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox chxOnTop;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown numUpDownThresholdMax;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown numUpDownThresholdMin;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox chxAlarm;
     }
 }

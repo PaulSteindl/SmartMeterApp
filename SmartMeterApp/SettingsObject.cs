@@ -22,6 +22,12 @@ namespace SmartMeterApp
 
         public int IntervallLogging { get; set; }
 
+        public int ThresholdMax { get; set; }
+
+        public int ThresholdMin { get; set; }
+
+        public bool FlagAlarm { get; set; }
+
         public bool FlagTop6Phase1 { get; set; }
 
         public bool FlagTop6Phase2 { get; set; }

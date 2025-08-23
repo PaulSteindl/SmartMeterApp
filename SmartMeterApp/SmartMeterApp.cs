@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.Json;
 using System.IO;
+using System.Media;
+using WindowsMedia = System.Windows.Media;
 
 namespace SmartMeterApp
 {
@@ -17,6 +19,9 @@ namespace SmartMeterApp
         private Timer _timerIntervall;
         private Timer _timerLogger;
         private static bool _isError;
+        private static bool _maxThresholdAlreadyPlayed;
+        private static bool _minThresholdAlreadyPlayed;
+        private static WindowsMedia.MediaPlayer _mediaPlayer;
 
         public SmartMeterApp()
         {
@@ -25,6 +30,11 @@ namespace SmartMeterApp
 
             _loggingActive = false;
             _isError = false;
+
+            _maxThresholdAlreadyPlayed = false;
+            _minThresholdAlreadyPlayed = false;
+            _mediaPlayer = new WindowsMedia.MediaPlayer();
+
             this.TopMost = Settings.ActualSettings.FlagOnTop;
 
             _timerIntervall = new Timer();
@@ -41,6 +51,7 @@ namespace SmartMeterApp
                 RequestObject resultTop7 = await GetSmartMeterApiDataAsync(Settings.ActualSettings.Top7Url);
 
                 UpdateUI(resultTop6, resultTop7);
+                CheckAlarm(resultTop6, resultTop7);
             }
             catch (Exception ex)
             {
@@ -281,6 +292,31 @@ namespace SmartMeterApp
             }
             else
                 this.txtBxTotalPhase.Text = "ERR";
+        }
+
+        private void CheckAlarm(RequestObject resultTop6, RequestObject resultTop7)
+        {
+            if (!Settings.ActualSettings.FlagAlarm || !resultTop6.PT.HasValue || !resultTop7.PT.HasValue) return;
+
+            double total = resultTop6.PT.Value + resultTop7.PT.Value;
+
+            if (!_maxThresholdAlreadyPlayed && total >= Settings.ActualSettings.ThresholdMax)
+            {
+                _mediaPlayer.Open(new Uri(@".\Custom_Sounds\bing_bong_sagt_der_gong.m4a", UriKind.RelativeOrAbsolute));
+                _mediaPlayer.Play();
+                _maxThresholdAlreadyPlayed = true;
+            }
+            
+            if (total < Settings.ActualSettings.ThresholdMax) _maxThresholdAlreadyPlayed = false;
+
+            if (!_minThresholdAlreadyPlayed && total <= Settings.ActualSettings.ThresholdMin)
+            {
+                _mediaPlayer.Open(new Uri(@"./Custom_Sounds/bong_bing_macht_der_ring.m4a", UriKind.RelativeOrAbsolute));
+                _mediaPlayer.Play();
+                _minThresholdAlreadyPlayed = true;
+            }
+
+            if (total > Settings.ActualSettings.ThresholdMin) _minThresholdAlreadyPlayed = false;
         }
 
         private static async Task<RequestObject> GetSmartMeterApiDataAsync(string url)

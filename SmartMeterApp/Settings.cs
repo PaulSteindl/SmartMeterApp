@@ -24,6 +24,9 @@ namespace SmartMeterApp
             Password = "Start123",
             IntervallRealtimeData = 1,
             IntervallLogging = 600,
+            ThresholdMax = 2000,
+            ThresholdMin = -2000,
+            FlagAlarm = false,
             FlagTop6Phase1 = true,
             FlagTop6Phase2 = true,
             FlagTop6Phase3 = true,
@@ -36,6 +39,7 @@ namespace SmartMeterApp
         public Settings()
         {
             InitializeComponent();
+            this.TopMost = ActualSettings.FlagOnTop;
             WriteSettingsIntoUI();
         }
 
@@ -78,6 +82,10 @@ namespace SmartMeterApp
             this.numUpDownIntervall.Value = settingsSaved.IntervallRealtimeData;
             this.numUpDownLogging.Value = settingsSaved.IntervallLogging;
 
+            this.numUpDownThresholdMax.Value = settingsSaved.ThresholdMax;
+            this.numUpDownThresholdMin.Value = settingsSaved.ThresholdMin;
+            this.chxAlarm.Checked = settingsSaved.FlagAlarm;
+
             this.chxTop6Phase1.Checked = settingsSaved.FlagTop6Phase1;
             this.chxTop6Phase2.Checked = settingsSaved.FlagTop6Phase2;
             this.chxTop6Phase3.Checked = settingsSaved.FlagTop6Phase3;
@@ -101,6 +109,10 @@ namespace SmartMeterApp
 
             settings.IntervallRealtimeData = Convert.ToInt32(this.numUpDownIntervall.Value);
             settings.IntervallLogging = Convert.ToInt32(this.numUpDownLogging.Value);
+
+            settings.ThresholdMax = Convert.ToInt32(this.numUpDownThresholdMax.Value);
+            settings.ThresholdMin = Convert.ToInt32(this.numUpDownThresholdMin.Value);
+            settings.FlagAlarm = this.chxAlarm.Checked;
 
             settings.FlagTop6Phase1 = this.chxTop6Phase1.Checked;
             settings.FlagTop6Phase2 = this.chxTop6Phase2.Checked;
